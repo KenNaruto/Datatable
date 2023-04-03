@@ -1,42 +1,4 @@
-/*! RowsGroup for DataTables v2.0.0
- * 2015-2016 Alexey Shildyakov ashl1future@gmail.com
- * 2016 Tibor Wekerle
- */
 
-/**
- * @summary     RowsGroup
- * @description Group rows by specified columns
- * @version     2.0.0
- * @file        dataTables.rowsGroup.js
- * @author      Alexey Shildyakov (ashl1future@gmail.com)
- * @contact     ashl1future@gmail.com
- * @copyright   Alexey Shildyakov
- * 
- * License      MIT - http://datatables.net/license/mit
- *
- * This feature plug-in for DataTables automatically merges columns cells
- * based on it's values equality. It supports multi-column row grouping
- * in according to the requested order with dependency from each previous 
- * requested columns. Now it supports ordering and searching. 
- * Please see the example.html for details.
- * 
- * Rows grouping in DataTables can be enabled by using any one of the following
- * options:
- *
- * * Setting the `rowsGroup` parameter in the DataTables initialisation
- *   to array which containes columns selectors
- *   (https://datatables.net/reference/type/column-selector) used for grouping. i.e.
- *    rowsGroup = [1, 'columnName:name', ]
- * * Setting the `rowsGroup` parameter in the DataTables defaults
- *   (thus causing all tables to have this feature) - i.e.
- *   `$.fn.dataTable.defaults.RowsGroup = [0]`.
- * * Creating a new instance: `new $.fn.dataTable.RowsGroup( table, columnsForGrouping );`
- *   where `table` is a DataTable's API instance and `columnsForGrouping` is the array
- *   described above.
- *
- * For more detailed information please see:
- *     
- */
 
 (function($){
 
@@ -267,19 +229,3 @@ $(document).on( 'init.dt', function ( e, settings ) {
 } );
 
 }(jQuery));
-
-/*
-
-TODO: Provide function which determines the all <tr>s and <td>s with "rowspan" html-attribute is parent (groupped) for the specified <tr> or <td>. To use in selections, editing or hover styles.
-
-TODO: Feature
-Use saved order direction for grouped columns
-	Split the columns into grouped and ungrouped.
-	
-	user = grouped+ungrouped
-	grouped = grouped
-	saved = grouped+ungrouped
-	
-	For grouped uses following order: user -> saved (because 'saved' include 'grouped' after first initialisation). This should be done with saving order like for 'groupedColumns'
-	For ungrouped: uses only 'user' input ordering
-*/

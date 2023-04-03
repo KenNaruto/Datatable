@@ -1,17 +1,7 @@
-/**
- * Export Plugin for DataTables.
- * 2016 Dida Nurwanda - www.didanurwanda.com
- */
+
 
 (function($) {
 
-    /**
-     * SaveAs function source from HTML5 export buttons  
-     * 2015 SpryMedia Ltd - datatables.net/license
-     * 
-     * FileSaver.js (2015-05-07.2) - MIT license
-     * Copyright © 2015 Eli Grey - http://eligrey.com 
-     */
     var saveAs = (function(view) {
         // IE <10 is explicitly unsupported
         if (typeof navigator !== "undefined" && /MSIE [1-9]\./.test(navigator.userAgent)) {
